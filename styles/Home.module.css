@@ -83,33 +83,35 @@
 	position: relative;
 	bottom: 50px;
 	z-index: 1;
-	background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../public/images/004.png");
+	background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../public/images/008.png");
 	background-size: cover;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	color: #fff;
-	
-	
+	padding: 0px 40px;
 }
 .hero_text{
 	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 100%;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 400px;
 	flex-direction: column;
+	text-align: left;
+	
 	
 }
 .hero_button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
+	width: 250px;
+	
 }
 .hero a{
 	border-radius: 18px;
 	background: rgba(255,0,120,0.6);
-	width: 100px;
+	width: 150px;
 	height: 30px;
 	display: flex;
 	align-items: center;
