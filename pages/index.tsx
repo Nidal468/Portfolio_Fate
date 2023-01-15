@@ -21,10 +21,12 @@ const Home: NextPage = () => {
         <Nav/>
 				<div className={styles.hero}>
 				<div className={styles.hero_text}>
-					<h1></h1>
-					<p></p>
-					<a></a>
-					<a></a>
+					<h1>Fate here!!</h1>
+					<p>I am Full Stack developer skilled in Next JS, React and WordPress</p>
+					<div className={styles.hero_button}>
+					<a>Websites</a>
+					<a>Designs</a>
+					</div>
 				</div>
 				</div>
       </main>

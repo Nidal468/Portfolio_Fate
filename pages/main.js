@@ -12,7 +12,7 @@ export function Nav() {
 				 <li><a href="#">Demos</a></li>
 				 <li><a href="#">Gigs</a></li>
 			 </ul>
-			 <h4><a href="#">Hire Now</a></h4>
+			 <h5><a href="#">Hire Now</a></h5>
 		 </nav>
 	 )
 }
