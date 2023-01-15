@@ -20,7 +20,12 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Nav/>
 				<div className={styles.hero}>
-				
+				<div className={styles.hero_text}>
+					<h1></h1>
+					<p></p>
+					<a></a>
+					<a></a>
+				</div>
 				</div>
       </main>
 
