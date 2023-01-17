@@ -4,12 +4,33 @@
 
 .main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
+.div_container{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	margin-top: 20px;
+	
+}
+.main h2{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 60px;
+	
+}
+.main p{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 20px;
+	
+}
 .footer {
   display: flex;
   flex: 1;
@@ -17,13 +38,18 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+	background: #111;
+	margin-top: 40px;
+	
 }
 
-.footer a {
+.footer h2{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+	color: #fff;
+	
 }
 
 .logo {
@@ -39,6 +65,9 @@
 	justify-content: space-evenly;
 	z-index: 999;
 	padding-top: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	
 }
 .Nav_body img{
@@ -87,18 +116,25 @@
 	background-size: cover;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 	color: #fff;
-	padding: 0px 40px;
+	padding: 0px 80px;
+	flex-wrap: wrap;
+	padding-top: 60px;
+	
+	
 }
 .hero_text{
 	display: flex;
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: space-between;
 	width: 400px;
 	flex-direction: column;
-	text-align: left;
 	
+	
+}
+.hero_text p{
+	text-align: left;
 	
 }
 .hero_button{
@@ -121,9 +157,129 @@
 	margin: 0px 10px;
 	
 }
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.anime{
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	transition: 1s;
+	
+}
+.anime:hover{
+	width: 240px;
+	height: 270px;
+	
+	
+}
+.anime_box{
+	width: 100px;
+	height: 100px;
+	transition: 1s;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.anime_box:hover{
+	transition: 1s;
+	border-radius: 12px;
+	width: 115px;
+	height: 140px;
+	
+}
+.anime_box img{
+	width: 100%;
+	
+}
+.small_box{
+	background: #e3edf7;
+	width: 50px;
+	height: 50px;
+	transition: 1s;
+	
+}
+.small_box:hover{
+	transform: rotate(45deg);
+	background: linear-gradient(rgb(0,0,0),rgb(30,30,30));
+	border: 1px solid #fff;
+}
+.box{
+	width: 100%;
+	height: 400px;
+	/* From https://css.glass */
+	background: linear-gradient(rgba(0,0,0,0.9),rgba(20,20,20,0.9));
+	border-radius: 0;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 0px 20px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	color: #fff;
+	margin: 0px 20px;
+	
+}
+.box p{
+	text-align: left;
+	
+}
+.box h2{
+	text-align: left;
+	position: relative;
+	right: 10px;
+	
+	
+}
+.box button{
+	width: 100px;
+	height: 50px;
+	border-radius: 0;
+	border: 1px solid #fff;
+	background: #fff;
+	color: #333;
+	
+}
+.box ul{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 340px;
+	background: #999;
+	
+}
+.box ul li{
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 16px;
+	height: 30px;
+	border-radius: 16px;
+	background: #ffffff;
+	border: 1px solid #333;
+	position: relative;
+	right: 50x;
+	
+}
+.box ul li p{
+	background: #444;
+	
+
+}
+.box ul li p a{
+	background: #666;
+	
+}
+.box ul li a i{
+	font-size: 25px;
+	
+	
 }
