@@ -1,11 +1,16 @@
-import type { NextPage } from 'next'
+import {useState} from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import {Nav, Contact, Box} from './main.js';
-
+import {Nav, Skill, Job} from './main.js';
 import styles from '../styles/Home.module.css'
 
 export default function App(){
+	const [isActive, setIsActive] = useState(true)
+	const [isSkill, setIsSkill] = useState(true)
+	
+	const title = isActive? "Full Stack Developer":"Graphic designer";
+	const info = isActive? "I am a full stack developer with 2 years experience and I mainly use React and sometimes Next JS.":"I have been a graphic designer for more then 2 year and I am skilled in designing UI and also good at making designs suited for better user experience";
+	const button = isActive? "Check out my projects":"View my designs";
+
 	
 	return(
 		<div className={styles.container}>
@@ -17,7 +22,7 @@ export default function App(){
 				
       </Head>
 			<Nav/>
-      <main className={styles.main}> 
+      <main className={styles.main}>
 				<div className={styles.hero}>
 				<div className={styles.hero_text}>
 					<h1>Fate here!!</h1>
@@ -28,6 +33,7 @@ export default function App(){
 					</div>
 				</div>
 					<div className={styles.anime}>
+						<span></span>
 					<div className={styles.anime_box} style={{borderTopLeftRadius:"12px"}}>
 					<img src=""/>
 						<div className={styles.small_box} style={{borderTopLeftRadius:"12px"}}><img/></div>
@@ -58,55 +64,26 @@ export default function App(){
 					</div>
 					</div>
 				</div>
-				<h2>What I do</h2>
-				<p>Previously I only worked as a Graphic designer on Fiverr but after completing my studies in React I am working as a full stack developer too</p>
-				<div className={styles.div_container}>
-					<Box 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-						width="300px"
-						button="Read More"
-					/>
-					<Box 
-					title="Graphic designer"
-					info="I have been working as a Graphic designer for more then 3 years and I have experience in Figma, Adobe XD and almost all adobe applications"
-						width="300px"
-						button="Read More"
-					/>
+				<div className={styles.main_container}>
+				<div className={styles.job}>
+				<div><img/><h1>{title}</h1><button onClick={() => setIsActive(current =>! current)}><span style={{transform: isActive? "translatex(-17px)":"translatex(17px)"}}></span></button></div>
+					<div className={styles.info}>
+						<p>{info}</p><a href="#">{button}</a>
 				</div>
-				<div className={styles.div_container}>
-				<Contact 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-					width="500px"
-					background="#fff"
-					color="#333"
-					border="1px solid #333"
-					/>
-					<Box 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-					background="#fff"
-					color="#333"
-					background_btn="lightblue"
-					color_btn="#fff"
-					border="1px solid #333"
-					border_btn="1px solid #333"
-					/>
 				</div>
-				<div className={styles.div_container}>
-					<Box 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-					/>
-					<Box 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-					/>
-					<Box 
-					title="Full Stack developer"
-					info="I have more then 2 years experience on React and 1 year in Next JS and I prefer frontend work more then backend"
-					/>
+					<img className={styles.image1}/>
+				</div>
+				<div className={styles.main_container}>
+					<Skill 
+						first={isSkill? "React JS":"Figma"} 
+						second="Next JS"
+						third="Typescript"
+						fourth="Node JS"
+						/>
+					<Job
+						state={isSkill}
+						setState={() => setIsSkill(current =>! current)}
+						/>
 				</div>
       </main>
 

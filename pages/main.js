@@ -43,3 +43,66 @@ export function Contact(props){
 				</div>
 	)
 }
+export function Skill(props){
+	const [isFirst, setIsFirst] = useState("hidden");
+	const [isSecond, setIsSecond] = useState("hidden"); 
+	const [isThird, setIsThird] = useState("hidden");
+	const [isFourth, setIsFourth] = useState("hidden");
+	
+	function First() {
+		setIsFirst("visible");
+		setIsSecond("hidden");
+		setIsThird("hidden)");
+		setIsFourth("hidden");
+		let skill = "React JS"
+	}
+	function Second() {
+		setIsFirst("hidden");
+		setIsSecond("visible");
+		setIsThird("hidden");
+		setIsFourth("hidden");
+		let skill = "Next "
+	}
+	function Third() {
+		setIsFirst("hidden");
+		setIsSecond("hidden");
+		setIsThird("visible");
+		setIsFourth("hidden");
+	}
+	function Fourth() {
+		setIsFirst("hidden");
+		setIsSecond("hidden");
+		setIsThird("hidden");
+		setIsFourth("visible");
+	}
+	
+	return(
+		<div className={styles.skills}>
+					<div className={styles.skill_body}>
+						<img src={props.img1} onClick={First}/>
+						<img src={props.img2} onClick={Second}/>
+						<img src={props.img3} onClick={Third}/>
+						<img src={props.img4} onClick={Fourth}/>
+					</div>
+						<div className={styles.skill}>
+							<p style={{visibility:isFirst}}>{props.first}</p>
+							<p style={{visibility:isSecond}}>{props.second}</p>
+							<p style={{visibility:isThird}}>{props.third}</p>
+							<p style={{visibility:isFourth}}>{props.fourth}</p>
+						</div>
+					</div>
+	)
+}
+export function Job(props) {
+	
+   return(
+		 <div className={styles.job}>
+				<div>
+					<img/><h1>{skill}</h1><button onClick={props.setState}><span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span></button>
+				</div>
+					<div className={styles.info}>
+						<p>{props.info}</p><a href="#">{props.button}</a>
+				</div>
+				</div>
+	 )
+}
