@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import Head from 'next/head'
-import {Nav, Skill, Job} from './main.js';
+import {Nav, Skill} from './main.js';
 import styles from '../styles/Home.module.css'
 
 export default function App(){
@@ -73,18 +73,10 @@ export default function App(){
 				</div>
 					<img className={styles.image1}/>
 				</div>
-				<div className={styles.main_container}>
 					<Skill 
-						first={isSkill? "React JS":"Figma"} 
-						second="Next JS"
-						third="Typescript"
-						fourth="Node JS"
-						/>
-					<Job
 						state={isSkill}
 						setState={() => setIsSkill(current =>! current)}
 						/>
-				</div>
       </main>
 
       <footer className={styles.footer}>

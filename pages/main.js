@@ -44,65 +44,57 @@ export function Contact(props){
 	)
 }
 export function Skill(props){
-	const [isFirst, setIsFirst] = useState("hidden");
-	const [isSecond, setIsSecond] = useState("hidden"); 
-	const [isThird, setIsThird] = useState("hidden");
-	const [isFourth, setIsFourth] = useState("hidden");
+	const first = props.state? "React JS":"Figma";
+	const second = props.state? "Next JS":"Adobe XD";
+	const third = props.state? "Typescript":"Adobe PhotoShop";
+	const fourth = props.state? "Node JS":"Adobe Illustrator";
+	const [isName, setIsName] = useState(first);
+	const [isPosition, setIsPosition] = useState("0px")
+	const [isColor, setIsColor] = useState("cyan")
+	const border = `1px solid ${isColor}`;
 	
 	function First() {
-		setIsFirst("visible");
-		setIsSecond("hidden");
-		setIsThird("hidden)");
-		setIsFourth("hidden");
-		let skill = "React JS"
+		setIsName(first);
+		setIsPosition("0px");
+		setIsColor("cyan");
 	}
 	function Second() {
-		setIsFirst("hidden");
-		setIsSecond("visible");
-		setIsThird("hidden");
-		setIsFourth("hidden");
-		let skill = "Next "
+		setIsName(second);
+		setIsPosition("55px");
+		setIsColor("green");
 	}
 	function Third() {
-		setIsFirst("hidden");
-		setIsSecond("hidden");
-		setIsThird("visible");
-		setIsFourth("hidden");
+		setIsName(third);
+		setIsPosition("115px");
+		setIsColor("red");
 	}
 	function Fourth() {
-		setIsFirst("hidden");
-		setIsSecond("hidden");
-		setIsThird("hidden");
-		setIsFourth("visible");
+		setIsName(fourth);
+		setIsPosition("170px");
+		setIsColor("blue");
 	}
 	
 	return(
-		<div className={styles.skills}>
+		<div className={styles.main_container}>
+			<div className={styles.skills}>
 					<div className={styles.skill_body}>
-						<img src={props.img1} onClick={First}/>
-						<img src={props.img2} onClick={Second}/>
-						<img src={props.img3} onClick={Third}/>
-						<img src={props.img4} onClick={Fourth}/>
+						<img src={props.img1} onClick={First} style={{border:border}}/>
+						<img src={props.img2} onClick={Second} style={{border:border}}/>
+						<img src={props.img3} onClick={Third} style={{border:border}}/>
+						<img src={props.img4} onClick={Fourth} style={{border:border}}/>
 					</div>
 						<div className={styles.skill}>
-							<p style={{visibility:isFirst}}>{props.first}</p>
-							<p style={{visibility:isSecond}}>{props.second}</p>
-							<p style={{visibility:isThird}}>{props.third}</p>
-							<p style={{visibility:isFourth}}>{props.fourth}</p>
+							<p style={{top:isPosition, background:isColor}}>{isName}</p>
 						</div>
 					</div>
-	)
-}
-export function Job(props) {
-	
-   return(
-		 <div className={styles.job}>
+			<div className={styles.job}>
 				<div>
-					<img/><h1>{skill}</h1><button onClick={props.setState}><span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span></button>
+					<img/><h1>{isName}</h1><button onClick={props.setState}><span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span></button>
 				</div>
 					<div className={styles.info}>
-						<p>{props.info}</p><a href="#">{props.button}</a>
+						<p style={{background:isColor}}>{props.info}</p><a href="#">{props.button}</a>
 				</div>
 				</div>
-	 )
+		</div>
+	)
 }
