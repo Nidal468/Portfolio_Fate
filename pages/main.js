@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 import Link from 'next/link';
-import data from '../data.json'; 
+import data from '../Data/data.json'; 
 
 import styles from '../styles/Home.module.css'
 
@@ -59,6 +59,7 @@ export function Skill(props){
 					</div>
 					<div className={styles.job}>
 				<div>
+					<img/>
 					<h1>{data[isData].title}</h1>
 					<button onClick={props.setState}>
 						<span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span>
