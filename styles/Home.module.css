@@ -232,11 +232,6 @@
 	justify-content: space-evenly;
 	
 }
-.job div img{
-	width: 50px;
-	border-radius: 8px;
-	
-}
 .job button{
 	border-radius: 18px;
 	width: 60px;
@@ -270,14 +265,19 @@
 .info a{
 	text-decoration: none;
 	background: rgb(255,30,120);
-	width: 180px;
+	width: 200px;
 	height: 30px;
 	border-radius: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 12px;
+	font-size: 10px;
 	color: #fff;
+	transition: 0.5s;
+	
+}
+.info a:hover{
+	background: #333;
 	
 }
 .skills{
@@ -318,6 +318,7 @@
 	border-radius: 18px;
 	position: relative;
 	color: #fff;
+	transition: 1s;
 	
 }
 .skill_body img{
@@ -326,5 +327,43 @@
 	border-radius: 50%;
 	background: #fff;
 	border: 1px solid #333;
+	transition: 1s;
+	
+}
+.contact_footer_container{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	margin-top: 80px;
+	
+	
+}
+.contact_footer{
+	width: 380px;
+	height: 100%;
+	background: #e3edf7;
+	border-radius: 26px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	
+}
+.contact_footer img{
+	width: 40px;
+	height: 100%;
+	background: #fff;
+	border-radius: 50%;
+	border: 1px solid #333;
+	margin: 0px 10px;
+	transition: 0.5s;
+	
+}
+.contact_footer img:hover{
+	background: #333;
+	border: 1px solid red;
 	
 }

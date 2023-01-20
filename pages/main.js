@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
-import { useRouter } from 'next/router';
+
 import Link from 'next/link';
+import data from '../data.json'; 
 
 import styles from '../styles/Home.module.css'
-
 
 export function Nav() {
    return(
@@ -14,7 +14,6 @@ export function Nav() {
 				 <li><Link href="/designs">Designs</Link></li>
 				 <li><Link href="/designs">Projects</Link></li>
 				 <li><Link href="/designs">Gigs</Link></li>
-				
 			 </ul>
 			 <h5><a href="#">Hire Now</a></h5>
 		 </nav>
@@ -44,57 +43,46 @@ export function Contact(props){
 	)
 }
 export function Skill(props){
-	const first = props.state? "React JS":"Figma";
-	const second = props.state? "Next JS":"Adobe XD";
-	const third = props.state? "Typescript":"Adobe PhotoShop";
-	const fourth = props.state? "Node JS":"Adobe Illustrator";
-	const [isName, setIsName] = useState(first);
-	const [isPosition, setIsPosition] = useState("0px")
-	const [isColor, setIsColor] = useState("cyan")
-	const border = `1px solid ${isColor}`;
-	
-	function First() {
-		setIsName(first);
-		setIsPosition("0px");
-		setIsColor("cyan");
-	}
-	function Second() {
-		setIsName(second);
-		setIsPosition("55px");
-		setIsColor("green");
-	}
-	function Third() {
-		setIsName(third);
-		setIsPosition("115px");
-		setIsColor("red");
-	}
-	function Fourth() {
-		setIsName(fourth);
-		setIsPosition("170px");
-		setIsColor("blue");
-	}
-	
+	const [isData, setIsData] = useState(0);
 	return(
-		<div className={styles.main_container}>
+			<div className={styles.main_container}>
 			<div className={styles.skills}>
 					<div className={styles.skill_body}>
-						<img src={props.img1} onClick={First} style={{border:border}}/>
-						<img src={props.img2} onClick={Second} style={{border:border}}/>
-						<img src={props.img3} onClick={Third} style={{border:border}}/>
-						<img src={props.img4} onClick={Fourth} style={{border:border}}/>
+						<img src={props.img1} onClick={() => setIsData(0)} style={{border:`1px solid ${data[isData].color}`}}/>
+						<img src={props.img2} onClick={() => setIsData(1)} style={{border:`1px solid ${data[isData].color}`}}/>
+						<img src={props.img3} onClick={() => setIsData(2)} style={{border:`1px solid ${data[isData].color}`}}/>
+						<img src={props.img4} onClick={() => setIsData(3)} style={{border:`1px solid ${data[isData].color}`}}/>
 					</div>
 						<div className={styles.skill}>
-							<p style={{top:isPosition, background:isColor}}>{isName}</p>
+							<p style={{top:data[isData].position, background:data[isData].color}}>{data[isData].title}</p>
 						</div>
 					</div>
-			<div className={styles.job}>
+					<div className={styles.job}>
 				<div>
-					<img/><h1>{isName}</h1><button onClick={props.setState}><span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span></button>
+					<h1>{data[isData].title}</h1>
+					<button onClick={props.setState}>
+						<span style={{transform: props.state? "translatex(-17px)":"translatex(17px)"}}></span>
+					</button>
 				</div>
 					<div className={styles.info}>
-						<p style={{background:isColor}}>{props.info}</p><a href="#">{props.button}</a>
+						<p>{data[isData].content}</p>
+						<a href="#">Check out my {data[isData].title} projects</a>
 				</div>
-				</div>
+					</div>
+		</div>
+	)
+}
+export function ContactFooter(props){
+	return(
+		<div className={styles.contact_footer_container}>
+		<div className={styles.contact_footer}>
+			<img src=""/>
+			<img src=""/>
+			<img src=""/>
+			<img src=""/>
+			<img src=""/>
+			<img src=""/>
+		</div>
 		</div>
 	)
 }
