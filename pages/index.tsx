@@ -1,13 +1,13 @@
 import {useState} from 'react'
 import Head from 'next/head'
-import {Nav, Skill, ContactFooter} from './main.js';
+import {Nav, Skill, ContactFooter} from './components/main.js';
 import styles from '../styles/Home.module.css'
 
 export default function App(){
 	const [isActive, setIsActive] = useState(true)
 	const [isSkill, setIsSkill] = useState(true)
 	
-	const title = isActive? "Full Stack Developer":"Graphic designer";
+	const title = "Abu Saleh";
 	const info = isActive? "I am a full stack developer with 2 years experience and I mainly use React and sometimes Next JS.":"I have been a graphic designer for more then 2 year and I am skilled in designing UI and also good at making designs suited for better user experience";
 	const button = isActive? "Check out my projects":"View my designs";
 
@@ -65,13 +65,15 @@ export default function App(){
 					</div>
 				</div>
 				<div className={styles.main_container}>
-				<div className={styles.job}>
-				<div><img/><h1>{title}</h1><button onClick={() => setIsActive(current =>! current)}><span style={{transform: isActive? "translatex(-17px)":"translatex(17px)"}}></span></button></div>
-					<div className={styles.info}>
-						<p>{info}</p><a href="#">{button}</a>
+				<div className={styles.about}>
+				<div className={styles.about_title}>
+					<small style={{color:"#7EC8E3", fontSize:"8px", width:"60%"}}>--About me--</small><h1>Abu Saleh</h1><h5>Full stack developer/Graphic Designer</h5>
+				</div>
+					<div className={styles.about_info}>
+						<p>{info}</p><div className={styles.about_info_years}><h2>3</h2><h4>Years of experience</h4></div><a href="#">{button}</a>
 				</div>
 				</div>
-					<img className={styles.image1}/>
+					<img className={styles.image1} src="images/007.png"/>
 				</div>
 				<Skill 
 						state={isSkill}

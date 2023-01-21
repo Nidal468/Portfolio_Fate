@@ -2,25 +2,25 @@
   {
 		"title": "React JS", 
 		"content": "I usually use React for small projects like building a blog page or normal websites and also use popular React packages like router, typescript, bootstrap etc",
-		"color":"cyan", 
+		"color":"#EF233C", 
 		"position":"0px"
   }, 
 	{
 		"title": "Next JS", 
 		"content": "I mainly use Next JS for high priced or large websites because it really takes a load off my shoulders with its amazing features",
-		"color":"green",
+		"color":"#A2D2FF",
 		"position":"55px"
 	}, 
 	{
 		"title": "Typescript", 
 		"content": "Typescript is must for me when I am building projects with react and next js or any projects related to java script in general",
-		"color":"blue", 
+		"color":"#2B2D42", 
 		"position":"115px"
 	}, 
 	{
 		"title": "Node JS", 
 		"content": "I only use Node JS when I have to but most of the time I just play around with node js to make AI chatbot of my in game characters",
-		"color":"red", 
+		"color":"#FFB6C1", 
 		"position":"175px"
   }
 ]

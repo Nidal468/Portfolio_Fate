@@ -4,6 +4,8 @@
 
 .main {
   min-height: 100vh;
+	background: #131419;
+	
 }
 .main h2{
 	width: 100%;
@@ -206,33 +208,43 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin-top: 140px;
+	margin-top: 40px;
 	
 }
 .image1{
 	width: 400px;
-	height: 300px;
-	background: #666;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: inset 5px 5px 6px #e0e0e0,
+            inset -5px -5px 6px #e0e0e0;
+	padding: 5px;
 	
 }
-.job{
-	width: 500px;
+.about{
+	width: 400px;
 	height: 300px;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding: 10px;
-	color: #333;
+	color: #fff;
+	
 }
-.job div{
+.about_title{
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
+	height: 60px;
+	font-size: 12px;
+	
 	
 }
-.job button{
+.about_title h1{
+	position: relative;
+	bottom: 10px;
+	width: 60%;
+	
+}
+.about_title h5{
+	position: relative;
+	bottom: 30px;
+	width: 60%;
+}
+.about button{
 	border-radius: 18px;
 	width: 60px;
 	height: 24px;
@@ -244,7 +256,7 @@
 	
 	
 }
-.job button span{
+.about button span{
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
@@ -252,17 +264,29 @@
 	transform: translatex(-17px);
 	transition: 0.5s;
 }
-.info{
-	padding: 10px;
+.about_info{
 	width: 100%;
 	height: 200px;
+}
+.about_info p{
+	width: 100%;
+	text-align: left;
+}
+.about_info_years{
+	width: 150px;
+	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	flex-direction: column;
 	
 }
-.info a{
+.about_info_years h2{
+	width: 40px;
+	position: relative;
+	bottom: 20px;
+	
+}
+.about_info a{
 	text-decoration: none;
 	background: rgb(255,30,120);
 	width: 200px;
@@ -276,12 +300,12 @@
 	transition: 0.5s;
 	
 }
-.info a:hover{
+.about_info a:hover{
 	background: #333;
 	
 }
 .skills{
-	width: 400px;
+	width: 270px;
 	height: 300px;
 	display: flex;
 	align-items: center;
@@ -297,10 +321,8 @@
 	justify-content: space-evenly;
 	flex-direction: column;
 	border-radius: 28px;
-	background: #ffffff;
-	box-shadow:  11px 11px 29px #e8e8e8,
-             -11px -11px 29px #ffffff;
-	border: 1px solid #333;
+	background: #333;
+	border: 1px solid #fff;
 	
 }
 .skill{
@@ -326,7 +348,6 @@
 	height: 35px;
 	border-radius: 50%;
 	background: #fff;
-	border: 1px solid #333;
 	transition: 1s;
 	
 }
@@ -355,15 +376,13 @@
 .contact_footer img{
 	width: 40px;
 	height: 100%;
-	background: #fff;
 	border-radius: 50%;
-	border: 1px solid #333;
+	border: 2px solid #333;
 	margin: 0px 10px;
 	transition: 0.5s;
 	
 }
 .contact_footer img:hover{
-	background: #333;
-	border: 1px solid red;
+	border: 2px solid red;
 	
 }
